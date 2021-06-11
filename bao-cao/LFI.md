@@ -110,6 +110,7 @@ Ta sẽ gửi param GET vượt quá 4096 kí tự.
 Ngoài ra còn có `zip://`, `data://`, `expect://`, ` input://`, ` phar://`,...
 
 Demo Notepad LFI: https://lfi-kcsc-training.glitch.me
+
 Source: [hypnguyen1209/demo-lfi](https://github.com/hypnguyen1209/demo-lfi)
 
 
