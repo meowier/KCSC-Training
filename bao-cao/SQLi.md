@@ -19,7 +19,9 @@ Người dùng có thể sửa đổi cấu trúc của cơ sở dữ liệu, th
 * Người dùng có thể kiểm soát máy chủ cơ sở dữ liệu và thực thi lệnh theo ý muốn.
 
 ![](https://topdev.vn/blog/wp-content/uploads/2019/05/sql-injection.png)
+
 Và đoạn code server xử lý:
+
 ```php
 if(isset($_POST['username']) && isset($_POST['password'])){
 $sql = "SELECT * FROM tbl_user WHERE username='". $_POST['username'] . "' AND password = '" .$_POST['password'] ."'";
@@ -137,7 +139,7 @@ Kiểu tấn công này xảy ra khi hacker không thể trực tiếp tấn cô
 Kiểu tấn công này phụ thuộc vào khả năng server thực hiện các request DNS hoặc HTTP để chuyển dữ liệu cho kẻ tấn công.
 
 
-## 3. Cách giảm thiểu và phòng ngừa SQL Injection
+## 3. Cách giảm thiểu và phòng ngừa SQL Injection (prevent SQLi)
 Hầu hết các trường hợp dính SQL injection là do việc nối string trong câu lệnh truy vấn SQL, thay vào đó thì ta sẽ tham số hóa các giá trị được truyền vào.
 * Tạo blacklist để từ chối truy vấn khi phát hiện người dùng truyền vào các syntax của SQL như ` ORDER BY`, `WHERE`, `UPDATE`, `UNION`,... và các kí tự đặc biệt như: `-`, `#`, `,` , `;`...
 
