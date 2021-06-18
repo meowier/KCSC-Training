@@ -1,7 +1,9 @@
 # Linux
 
 Linux là một họ các hệ điều hành tự do nguồn mở tương tự Unix và dựa trên Linux kernel, một hạt nhân hệ điều hành được phát hành lần đầu tiên vào ngày 17 tháng 9 năm 1991, bởi Linus Torvalds.
-Các phiên bản hệ điều hành Linux phổ biến
+
+Các phiên bản hệ điều hành Linux phổ biến:
+
 * Ubuntu.
 * Fedora – Red Hat.
 * Linux Mint.
@@ -12,6 +14,7 @@ Hiện nay thì linux đang là hệ điều hành đang được sử dụng nh
 ## 1. Các câu lệnh cơ bản
 
 ![](https://ductam.info/wp-content/uploads/2018/10/0_dybXjl1uLFUZ9kvc.jpg)
+
 `pwn`: được dùng để tìm đường dẫn của thư mục hiện tại (folder) mà ta đang ở trong đó.
 
 `cd`: để chuyển hướng trong hệ thống tập tin Linux, bạn có thể sử dụng command cd. Nó sẽ cần nhập đường dẫn đầy đủ hoặc tên thư mục ta muốn chuyển tới.
