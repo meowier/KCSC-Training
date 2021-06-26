@@ -132,7 +132,7 @@ Phương pháp tấn công cũ này với một payload mới cho thấy một x
 
 | Languages | URL  |
 |-----------|------|
-| Python    | [Link](/meowier/KCSC-Training/tree/main/bao-cao/deserialization/python.md) |
-| PHP       | [Link](/meowier/KCSC-Training/tree/main/bao-cao/deserialization/php.md) |
-| Java      | [Link](/meowier/KCSC-Training/tree/main/bao-cao/deserialization/java.md) |
+| Python    | [Link](/bao-cao/deserialization/python.md) |
+| PHP       | [Link](/bao-cao/deserialization/php.md) |
+| Java      | [Link](/bao-cao/deserialization/java.md) |
 
